@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- メタ情報 -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>PUROMON</title>
+        <meta name="description" content="自分のオリジナルカードを作って、自分自身をプロモーションしよう！">
+        <!-- favicon -->
+        <link rel="icon" href="favicon.png" id="favicon">
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon.ico">
+        <!-- tailwind css v3.2.2 CDN -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- VUe.js CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto&display=swap" rel="stylesheet">
+        <style>
+            body{
+                font-family: 'Noto Sans JP', sans-serif;
+                font-family: 'Roboto', sans-serif;
+            }
+        </style>
+        <!-- Google Analytics -->
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-V86RNFNQ3E"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-V86RNFNQ3E');
+        </script>
+    </head>
+    <body class="bg-[#F8F6F6]">
+        <div id="app">
+            <header class="container mx-auto bg-[#E74C3C] h-15 text-white max-w-screen-md">
+                <div class="container flex justify-between py-4 fixed bg-[#E74C3C] max-w-screen-md">
+                    <h1 class="flex justify-center items-center w-full">
+                        <a href="/top"><img src="Group_1.png" class="w-32 h-7 ml-9"></a>
+                    </h1>
+                    <button @click="isOpen = !isOpen" class="ml-auto mr-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path v-show="!isOpen" stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            <path v-show="isOpen" stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div :class="isOpen ? 'block' : 'hidden'" class="fixed bg-[#E74C3C] container mx-auto mt-14 h-full overflow-y-scroll max-w-screen-md">
+                    <div class="bg-[#E74C3C] pb-24 text-sm">
+                        <ul>
+                            <li>
+                                <a href="/top" class="block text-xl text-center py-4 my-6 hover:font-bold">トップページ</a>
+                            </li>
+                            <li>
+                                <a href="/guide" class="block text-xl text-center py-4 my-4 hover:font-bold">ご利用ガイド</a>
+                            </li>
+                            <li>
+                                <a href="/faq" class="block text-xl text-center py-4 my-4 hover:font-bold">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="/contact" class="block text-xl text-center py-4 my-4 hover:font-bold">お問い合わせ</a>
+                            </li>
+                            <li>
+                                <a href="/tokutei" class="block text-xl text-center py-4 my-4 hover:font-bold">特定商取引法に基づく表記</a>
+                            </li>
+                            <li>
+                                <a href="/privacy" class="block text-xl text-center py-4 my-4 hover:font-bold">プライバシーポリシー</a>
+                            </li>
+                            <li>
+                                <a href="/tos" class="block text-xl text-center py-4 my-4 hover:font-bold">利用規約</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <script>
+                const app = new Vue({
+                    el: '#app',
+                    data: {
+                        isOpen: false,
+                    },
+                });
+            </script>
+        </div>
+        <div class="container mx-auto pt-20 pb-10 max-w-screen-md text-sm">
+            <h1 class="text-center font-bold text-2xl pt-10 pb-3">”PUROMON”ヒアリングフォーム</h1>
+            <p class="text-center pb-10 px-10">自分自身のオリジナルカードを作って、プロモーションに役立てよう！！</p>
+            <form class="px-10" action="https://hyperform.jp/api/1WVlRx5z" method="POST" enctype="multipart/form-data">
+                <h2 class="text-center font-bold text-xl pb-3">サンプル</h2>
+                <p class="flex justify-center pb-10"><img src="Group_2.png"></p>
+                <div class="flex justify-center">
+                    <div class="w-full max-w-md">
+                        <div class="pt-2">
+                            <label class="block" for="eMail">決済画面で登録したメールアドレスを入力してください。<span class="text-[#E74C3C] pl-2">※必須</span></label>
+                            <input type="email" name="eMail" placeholder="xxxxxxxxxx@xxxxx.com" required class="pl-2 mt-1 w-full" id="eMail">
+                        </div>
+                        <div class="pt-2">
+                            <label class="block" for="cellPhone">決済画面で登録した電話番号を入力してください。<span class="text-[#E74C3C] pl-2">※必須</span></label>
+                            <input type="tel" name="cellPhone" pattern="[0-9]{3}[0-9]{4}[0-9]{4}" placeholder="09012345678" required class="pl-2 mt-1 w-full" id="cellPhone">
+                        </div>
+                        <div class="pt-2">
+                            <label class="block" for="fullName">①に入れたいお名前<span class="text-[#E74C3C] pl-2">※必須</span></label>
+                            <input type="name" name="fullName" placeholder="回答を入力" required class="pl-2 mt-1 w-full" id="fullName">
+                        </div>
+                        <div class="pt-2">
+                            <label class="block" for="jobs">②・③に入れたい職業<span class="text-[#E74C3C] pl-2">※必須</span></label>
+                            <select name="jobs" required class="pl-2 mt-1 w-full" id="jobs">
+                                <option selected disabled value="選択">選択</option>
+                                <option value="サラリーマン">サラリーマン</option>
+                                <option value="板前">板前</option>
+                                <option value="オタク">オタク</option>
+                                <option value="自宅警備員">自宅警備員</option>
+                                <option value="ホステス">ホステス</option>
+                                <option value="大学生">大学生</option>
+                                <option value="モデル">モデル</option>
+                                <option value="転売ヤー">転売ヤー</option>
+                                <option value="エンジニア">エンジニア</option>
+                                <option value="バイト">バイト</option>
+                                <option value="サポート">サポート</option>
+                                <option value="ディレクター">ディレクター</option>
+                                <option value="社長">社長</option>
+                                <option value="俳優">俳優</option>
+                                <option value="その他">その他</option>
+                            </select>
+                        </div>
+                        <div class="pt-2">
+                            <label>②・③でその他を選んだ場合、あなたの職業を記入してください。</label>
+                            <input type="text" name="job"  placeholder="回答を入力" class="pl-2 mt-1 w-full" id="job">
+                        </div>
+                        <div class="pt-2">
+                            <label class="block" for="characterAccount">④キャラクターの説明（40文字程度）<span class="text-[#E74C3C] pl-2">※必須</span></label>
+                            <textarea name="characterAccount" cols="40" rows="2" required maxlength="50" placeholder="回答を入力" class="pl-2 pt-1 mt-1 w-full" id="characterAccount"></textarea>
+                        </div>
+                          
+                        <div class="pt-2">
+                            <label class="block" for="effectAccount">⑤カードの効果説明（20文字程度）<span class="text-[#E74C3C] pl-2">※必須</span></label>
+                            <textarea name="effectAccount" cols="40" rows="2" required maxlength="30" placeholder="回答を入力" class="pl-2 pt-1 mt-1 w-full" id="effectAccount"></textarea>
+                        </div>
+                        <div class="max-w-screen-sm pt-2">
+                            <label class="block">⑥スタンプ<span class="text-[#E74C3C] pl-2">※必須</span></label>
+                            <div class="flex justify-center pt-2">
+                                <div class="px-2 flex flex-col items-center">
+                                    <img src="Stamp_1.jpg" class="w-full">
+                                    <label class="mt-2"><input type="radio" name="stamp" id="stamp" value="Z世代"><span class="pl-2">Z世代</span></label>
+                                </div>
+                                <div class="px-2 flex flex-col items-center">
+                                    <img src="Stamp_2.jpg" class="w-full">
+                                    <label class="mt-2"><input type="radio" name="stamp" id="stamp" value="Vibes（バイブス）"><span class="pl-2">Vibes（バイブス）</span></label>
+                                </div>
+                            </div>
+                            <div class="flex justify-center pt-2">
+                                <div class="px-2 flex flex-col items-center">
+                                    <img src="Stamp_3.jpg" class="w-full">
+                                    <label class="mt-2"><input type="radio" name="stamp" id="stamp" value="CHILL（チル）"><span class="pl-2">CHILL（チル）</span></label>
+                                </div>
+                                <div class="px-2 flex flex-col items-center">
+                                    <img src="Stamp_4.jpg" class="w-full">
+                                    <label class="mt-2"><input type="radio" name="stamp" id="stamp" value="muscle（マッスル）"><span class="pl-2">muscle（マッスル）</span></label>
+                                </div>
+                            </div>
+                            <div class="flex justify-center pt-2">
+                                <div class="px-2 flex flex-col items-center">
+                                    <img src="Stamp_5.jpg" class="w-full">
+                                    <label class="mt-2"><input type="radio" name="stamp" id="stamp" value="friends（友達募集）"><span class="pl-2">friends（友達募集）</span></label>
+                                </div>
+                                <div class="px-2 flex flex-col items-center">
+                                    <img src="Stamp_6.jpg" class="w-full">
+                                    <label class="mt-2"><input type="radio" name="stamp" id="stamp" value="DREAM（夢）"><span class="pl-2">DREAM（夢）</span></label>
+                                </div>
+                            </div>
+                            <div class="flex justify-center pt-2">
+                                <div class="px-2 flex flex-col items-center">
+                                    <img src="Stamp_7.jpg" class="w-full">
+                                    <label class="mt-2"><input type="radio" name="stamp" id="stamp" value="LOVE&PEACE"><span class="pl-2">LOVE&PEACE</span></label>
+                                </div>
+                                <div class="px-2 flex flex-col items-center">
+                                    <img src="Stamp_8.jpg" class="w-full">
+                                    <label class="mt-2"><input type="radio" name="stamp" id="stamp" value="STAR（スター）"><span class="pl-2">STAR（スター）</span></label>
+                                </div>
+                            </div>
+                            <div class="flex justify-center pt-2">
+                                <div class="px-2 flex flex-col items-center">
+                                    <img src="Stamp_9.jpg" class="w-full">
+                                    <label class="mt-2"><input type="radio" name="stamp" id="stamp" value="Amore（恋人募集中）"><span class="pl-4">Amore<br>（恋人募集中）</span></label>
+                                </div>
+                                <div class="px-2 flex flex-col items-center">
+                                    <img src="Stamp_10.jpg" class="w-full">
+                                    <label class="mt-2"><input type="radio" name="stamp" id="stamp" value="ICHIGEKI！（一撃！）"><span class="pl-2">ICHIGEKI！<br>　（一撃！）</span></label>
+                                </div>
+                                <div class="px-2 flex flex-col items-center">
+                                    <img src="Stamp_11.jpg" class="w-full">
+                                    <label class="mt-2"><input type="radio" name="stamp" id="stamp" value="HUNTING（婚活中）"><span class="pl-2">HUNTING<br>　（婚活中）</span></label>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        
+                        <div class="pt-2">
+                            <label class="block" for="favorites">⑦好きなもの<span class="text-[#E74C3C] pl-2">※必須</span></label>
+                            <select name="favorites" required class="pl-2 mt-1 w-full" id="favorites">
+                                <option selected disabled value="選択">選択</option>
+                                <option value="アニメ">アニメ</option>
+                                <option value="鹿">鹿</option>
+                                <option value="アメリカンフード">アメリカンフード</option>
+                                <option value="キリン">キリン</option>
+                                <option value="パン類（フランスパン、クロワッサン、食パン、等）">パン類（フランスパン、クロワッサン、食パン、等）</option>
+                                <option value="警察官">警察官</option>
+                                <option value="動物">動物</option>
+                                <option value="火">火</option>
+                                <option value="サブカル">サブカル</option>
+                                <option value="カエサル">カエサル</option>
+                                <option value="中世ヨーロッパ">中世ヨーロッパ</option>
+                                <option value="中華美人">中華美人</option>
+                                <option value="カッパ">カッパ</option>
+                                <option value="その他">その他</option>
+                            </select>
+                        </div>
+                        <div class="pt-2">
+                            <label class="block" for="favorite">⑦その他を選んだ場合、お好きなものを入力してください。</label>
+                            <input type="text" name="favorite" placeholder="回答を入力" class="pl-2 mt-1 w-full" id="favorite">
+                        </div>
+                        <div class="pt-2">
+                            <label class="block" for="places">⑧好きな場所<span class="text-[#E74C3C] pl-2">※必須</span></label>
+                            <select name="places" required class="pl-2 mt-1 w-full" id="places">
+                                <option selected disabled value="選択">選択</option>
+                                <option value="動物園">動物園</option>
+                                <option value="アメリカ">アメリカ</option>
+                                <option value="フランス">フランス</option>
+                                <option value="秋葉原">秋葉原</option>
+                                <option value="アジア">アジア</option>
+                                <option value="セブンイレブン">セブンイレブン</option>
+                                <option value="中国">中国</option>
+                                <option value="ヨーロッパ">ヨーロッパ</option>
+                                <option value="その他">その他</option>
+                            </select>
+                        </div>
+                        <div class="pt-2">
+                            <label class="block" for="place">⑧その他を選んだ場合、お好きな場所を入力してください。</label>
+                            <input type="text" name="place" placeholder="回答を入力" class="pl-2 mt-1 w-full" id="place">
+                        </div>  
+                        <div class="pt-2">
+                            <label class="block" for="photo">⑨あなたの顔写真を添付してください。<span class="text-[#E74C3C] pl-2">※必須</span></label>
+                            <p class="mt-1 pl-2">最大9枚まで（最大合計ファイルサイズ10MB）</p>
+                            <p class="pl-2 pt-1">○正面・若干の表情を変えたものを6枚ご準備ください。</p>
+                            <p class="text-[#E74C3C] pl-2">※必須6枚</p>
+                            <input type="file" name="photo001" required accept="image/*" class="pl-2 mt-1" id="photo001">
+                            <input type="file" name="photo002" required accept="image/*" class="pl-2 mt-1" id="photo002">
+                            <input type="file" name="photo003" required accept="image/*" class="pl-2 mt-1" id="photo003">
+                            <input type="file" name="photo004" required accept="image/*" class="pl-2 mt-1" id="photo004">
+                            <input type="file" name="photo005" required accept="image/*" class="pl-2 mt-1" id="photo005">
+                            <input type="file" name="photo006" required accept="image/*" class="pl-2 mt-1" id="photo006">
+                            <p class="pl-2 pt-1">○ご用意があれば正面・若干の表情を変えたものを追加で3枚ご準備ください。</p>
+                            <p class="pl-2">※任意3枚</p>
+                            <input type="file" name="photo007" accept="image/*" class="pl-2 mt-1" id="photo007">
+                            <input type="file" name="photo008" accept="image/*" class="pl-2 mt-1" id="photo008">
+                            <input type="file" name="photo009" accept="image/*" class="pl-2 mt-1" id="photo009">
+                        <div class="text-center pt-4">
+                            <button type="submit" class="bg-[#E74C3C] py-2 px-20 mb-10 rounded-full text-white font-semibold">送信</button>
+                        </div>
+                    </div>
+                </div>
+                <!--
+                <script type="text/javascript">
+                    const submitted = false;
+                </script>
+                -->
+            </form>
+             <!--<iframe name="hidden_iframe" id="hidden_iframe" style="display: none" onload="if(submitted){window.location='../hearing-thanks/index.html';}"></iframe> -->
+        </div>
+        <footer class="container mx-auto bg-[#E74C3C] text-center py-2 max-w-screen-md">
+            <a class="text-base text-white font-semibold">Copyright © 2023 puromon AII Rights Reserved.</a>
+        </footer>
+    </body>
+</html>
