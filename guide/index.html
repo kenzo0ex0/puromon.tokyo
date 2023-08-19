@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- メタ情報 -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>PUROMON</title>
+        <meta name="description" content="自分のオリジナルカードを作って、自分自身をプロモーションしよう！">
+        <!-- favicon -->
+        <link rel="icon" href="favicon.png" id="favicon">
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon.ico">
+        <!-- tailwind css v3.2.2 CDN -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- VUe.js CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto&display=swap" rel="stylesheet">
+        <style>
+            body{
+                font-family: 'Noto Sans JP', sans-serif;
+                font-family: 'Roboto', sans-serif;
+            }
+        </style>
+        <!-- Google Analytics -->
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-V86RNFNQ3E"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-V86RNFNQ3E');
+        </script>
+    </head>
+    <body class="bg-[#F8F6F6]">
+        <div id="app">
+            <header class="container mx-auto bg-[#E74C3C] h-15 text-white max-w-screen-md">
+                <div class="container flex justify-between py-4 fixed bg-[#E74C3C] max-w-screen-md">
+                    <h1 class="flex justify-center items-center w-full">
+                        <a href="/top"><img src="Group_1.png" class="w-32 h-7 ml-9"></a>
+                    </h1>
+                    <button @click="isOpen = !isOpen" class="ml-auto mr-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path v-show="!isOpen" stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            <path v-show="isOpen" stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div :class="isOpen ? 'block' : 'hidden'" class="fixed bg-[#E74C3C] container mx-auto mt-14 h-full overflow-y-scroll max-w-screen-md">
+                    <div class="bg-[#E74C3C] pb-24 text-sm">
+                        <ul>
+                            <li>
+                                <a href="/top" class="block text-xl text-center py-4 my-6 hover:font-bold">トップページ</a>
+                            </li>
+                            <li>
+                                <a href="/guide" class="block text-xl text-center py-4 my-4 hover:font-bold">ご利用ガイド</a>
+                            </li>
+                            <li>
+                                <a href="/faq" class="block text-xl text-center py-4 my-4 hover:font-bold">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="/contact" class="block text-xl text-center py-4 my-4 hover:font-bold">お問い合わせ</a>
+                            </li>
+                            <li>
+                                <a href="/tokutei" class="block text-xl text-center py-4 my-4 hover:font-bold">特定商取引法に基づく表記</a>
+                            </li>
+                            <li>
+                                <a href="/privacy" class="block text-xl text-center py-4 my-4 hover:font-bold">プライバシーポリシー</a>
+                            </li>
+                            <li>
+                                <a href="/tos" class="block text-xl text-center py-4 my-4 hover:font-bold">利用規約</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <script>
+                const app = new Vue({
+                    el: '#app',
+                    data: {
+                        isOpen: false,
+                    },
+                });
+            </script>
+        </div>
+        <div class="container mx-auto pt-20 pb-10 max-w-screen-md px-10">
+            <h1 class="text-center font-bold text-2xl pt-10 pb-8">ご利用ガイド</h1>
+            <div class="text-sm">
+                <ol style="list-style-type: decimal;" class="pt-2">
+                    <li><span class="font-semibold">商品の選択</span>
+                        <p class="pt-2">当サイトでは、プロモーションカード「プロモン」を3種類ご提供しています。</p>
+                        <p>以下は各種類の概要です。</p>
+                        <ul class="pt-2">
+                            <li>オリジナルプロモンカード Vol.1（ホログラムあり・100枚入り）：27,500円（税込）</li>
+                            <li>オリジナルプロモンカード Vol.2（ホログラムなし・100枚入り）：19,800円（税込）</li>
+                            <li>オリジナルプロモンカード Vol.3（ホログラムなし・データ&表のみ）：5,500円（税込）</li>
+                        </ul>
+                        <p class="pt-2">ご希望の商品を選択し、数量を指定してください。</p>
+                    </li>
+                    <li class="pt-2"><span class="font-semibold">注文手続きとデザイン作成</span>
+                        <ul class="pt-2">
+                            <li>注文手続きを完了した後、弊社担当者と連絡を取ります。デザインに関する詳細や要望を共有し、オリジナルデザインの作成に入ります。</li>
+                            <li>弊社担当者はお客様とやり取りを行いながら、デザインの作成を進めます。必要な素材や画像、ロゴなどを提供していただき、それを基にオリジナルデザインを制作いたします。</li>
+                        </ul>
+                    </li>
+                    <li class="pt-2"><span class="font-semibold">お支払い</span>
+                        <p>デザイン作成に入る前に、ご注文の合計金額をご確認いただき、お支払いを完了してください。</p>
+                        <p>ご利用いただける支払い方法は、現在はクレジットカードのみとなります。</p>
+                        <p><!--ご都合に合わせた方法を選択してください。--></p>
+                    </li>
+                    <li class="pt-2"><span class="font-semibold">商品の制作と配送</span>
+                        <ul>
+                            <li>デザイン作成が完了次第、オリジナルプロモンカードの製造・印刷が行われます。通常は制作からお届けまでに2〜4週間ほどかかります。ご了承ください。</li>
+                            <li>商品の発送は、制作が完了した順に行われます。発送後は、お客様にお届け予定日や追跡番号などをご案内いたします。</li>
+                        </ul>
+                    </li>
+                    <li class="pt-2"><span class="font-semibold">返品・キャンセルについて</span>
+                        <p>オリジナルプロモンカードは、ご注文内容やデザインの特性上、一度制作を開始すると返品やキャンセルはできません。</p>
+                        <p>商品に不具合や破損があった場合は、お問い合わせページよりご連絡ください。</p>
+                    </li>
+                    <li class="pt-2"><span class="font-semibold">お問い合わせ</span>
+                        <p>サイト内のお問い合わせページから、ご注文や商品に関するご質問やお問い合わせを承っております。お気軽にお問い合わせください。</p>
+                    </li>
+                </ol>
+
+            </div>
+
+        </div>
+        <footer class="container mx-auto bg-[#E74C3C] text-center py-2 max-w-screen-md">
+            <a class="text-base text-white font-semibold">Copyright © 2023 puromon AII Rights Reserved.</a>
+        </footer>
+    </body>
+</html>
