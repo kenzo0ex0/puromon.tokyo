@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- メタ情報 -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>PUROMON</title>
+        <meta name="description" content="自分のオリジナルカードを作って、自分自身をプロモーションしよう！">
+        <!-- favicon -->
+        <link rel="icon" href="favicon.png" id="favicon">
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon.ico">
+        <!-- tailwind css v3.2.2 CDN -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- VUe.js CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto&display=swap" rel="stylesheet">
+        <style>
+            body{
+                font-family: 'Noto Sans JP', sans-serif;
+                font-family: 'Roboto', sans-serif;
+            }
+        </style>
+        <!-- Google Analytics -->
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-V86RNFNQ3E"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-V86RNFNQ3E');
+        </script>
+    </head>
+    <body class="bg-[#F8F6F6]">
+        <div id="app">
+            <header class="container mx-auto bg-[#E74C3C] h-15 text-white max-w-screen-md">
+                <div class="container flex justify-between py-4 fixed bg-[#E74C3C] max-w-screen-md">
+                    <h1 class="flex justify-center items-center w-full">
+                        <a href="/top"><img src="Group_1.png" class="w-32 h-7 ml-9"></a>
+                    </h1>
+                    <button @click="isOpen = !isOpen" class="ml-auto mr-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path v-show="!isOpen" stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            <path v-show="isOpen" stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div :class="isOpen ? 'block' : 'hidden'" class="fixed bg-[#E74C3C] container mx-auto mt-14 h-full overflow-y-scroll max-w-screen-md">
+                    <div class="bg-[#E74C3C] pb-24 text-sm">
+                        <ul>
+                            <li>
+                                <a href="/top" class="block text-xl text-center py-4 my-6 hover:font-bold">トップページ</a>
+                            </li>
+                            <li>
+                                <a href="/guide" class="block text-xl text-center py-4 my-4 hover:font-bold">ご利用ガイド</a>
+                            </li>
+                            <li>
+                                <a href="/faq" class="block text-xl text-center py-4 my-4 hover:font-bold">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="/contact" class="block text-xl text-center py-4 my-4 hover:font-bold">お問い合わせ</a>
+                            </li>
+                            <li>
+                                <a href="/tokutei" class="block text-xl text-center py-4 my-4 hover:font-bold">特定商取引法に基づく表記</a>
+                            </li>
+                            <li>
+                                <a href="/privacy" class="block text-xl text-center py-4 my-4 hover:font-bold">プライバシーポリシー</a>
+                            </li>
+                            <li>
+                                <a href="/tos" class="block text-xl text-center py-4 my-4 hover:font-bold">利用規約</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <script>
+                const app = new Vue({
+                    el: '#app',
+                    data: {
+                        isOpen: false,
+                    },
+                });
+            </script>
+        </div>
+        <div class="container mx-auto pt-20 pb-10 px-10 max-w-screen-md text-sm">
+            <h1 class="text-center font-bold text-xl pt-10 pb-8">特定商取引に関する表記</h1>
+            <div>
+                <div>
+                    <h3 class="text-base font-semibold">販売事業者</h3>
+                    <p class="mt-2">株式会社ANTS</p>
+                </div>
+                <div>
+                    <h3 class="text-base font-semibold mt-8">代表者</h3>
+                    <p class="mt-2">右手健一郎</p>
+                </div>
+                <div>
+                    <h3 class="text-base font-semibold mt-8">所在地</h3>
+                    <p class="mt-2">東京都台東区浅草2-29-12</p>
+                </div>
+                <div>
+                    <h3 class="text-base font-semibold mt-8">電話番号</h3>
+                    <p class="mt-2">03-5246-4130</p>
+                    <p class="mt-2">※お取引やサービスについてのお問い合わせは、個人情報保護および円滑なご案内のため、ヘルプセンターからご連絡いただけますと幸いです。</p>
+                </div>
+                <div>
+                    <h3 class="text-base font-semibold mt-8">メールアドレス</h3>
+                    <p class="mt-2">info@puromon.tokyo</p>
+                </div>
+                <div>
+                    <h3 class="text-base font-semibold mt-8">販売URL</h3>
+                    <p class="mt-2">http://puromon.tokyo</p> 
+                </div>
+                <div>
+                    <h3 class="text-base font-semibold mt-8">商品の販売価格</h3>
+                    <p class="mt-2">各商品ページをご参照ください。</p> 
+                </div>
+                <div>
+                    <h3 class="text-base font-semibold mt-8">商品以外の必要料金</h3>
+                    <p class="mt-2">送料、支払い方法により所定の手数料</p> 
+                </div>
+                <div>
+                    <h3 class="text-base font-semibold mt-8">消費税</h3>
+                    <p class="mt-2">消費税は販売価格に含まれています。</p>
+                    <p>当店の商品の表示金額は全て内税となっております。</p>
+                </div>
+                <div>
+                    <h3 class="text-base font-semibold mt-8">支払方法</h3>
+                    <p class="mt-2">クレジットカード決済</p> 
+                </div>
+                <div>
+                    <h3 class="text-base font-semibold mt-8">支払時期</h3>
+                    <ul class="mt-2">
+                        <li>・クレジットカード決済：商品注文時にお支払いが確定します。</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-base font-semibold mt-8">商品の引渡時期</h3>
+                    <p class="mt-2">ご注文日から2〜3週間以内に発送致します。</p> 
+                </div>
+                <div>
+                    <h3 class="text-base font-semibold mt-8">返品・交換</h3>
+                    <ul class="mt-2">
+                        <li>オーダー商品のため返品交換は原則受け付けておりません。</li>
+                        <li>配送のトラブル等での破損のみ対応しております。</li>
+                        <li>返品交換時にかかる送料については、商品に欠陥がある場合には当方負担、お客様のご都合による返品・交換の場合にはお客様負担となります。</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <footer class="container mx-auto bg-[#E74C3C] text-center py-2 max-w-screen-md">
+            <a class="text-base text-white font-semibold">Copyright © 2023 puromon AII Rights Reserved.</a>
+        </footer>
+    </body>
+</html>
